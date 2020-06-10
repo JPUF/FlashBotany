@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
 
 import com.jlbennett.flashbotany.R
@@ -22,7 +23,12 @@ class FlashFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_flash, container, false)
-
+        binding.familyButton1.setOnClickListener {
+            if (binding.infoFragment.visibility == View.GONE)
+                binding.infoFragment.visibility = View.VISIBLE
+            else
+                binding.infoFragment.visibility = View.GONE
+        }
 
         return binding.root
     }
