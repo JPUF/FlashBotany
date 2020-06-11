@@ -11,97 +11,6 @@
             tools:context=".flash.FlashFragment">
 
         <LinearLayout
-                android:id="@+id/answerLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:visibility="visible"
-                app:layout_constraintBottom_toTopOf="@+id/infoFragment"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-            <LinearLayout
-                    android:id="@+id/firstPairLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                <ToggleButton
-                        android:id="@+id/familyButton1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Rosaceae"
-                        android:textOff="Rosaceae"
-                        android:textOn="Rosaceae" />
-
-                <ToggleButton
-                        android:id="@+id/familyButton2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Boraginaceae"
-                        android:textOff="Boraginaceae"
-                        android:textOn="Boraginaceae" />
-            </LinearLayout>
-
-            <LinearLayout
-                    android:id="@+id/secondPairLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                <ToggleButton
-                        android:id="@+id/familyButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Asteraceae"
-                        android:textOff="Asteraceae"
-                        android:textOn="Asteraceae" />
-
-                <ToggleButton
-                        android:id="@+id/familyButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Lamiaceae"
-                        android:textOff="Lamiaceae"
-                        android:textOn="Lamiaceae" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/infoFragment"
-                android:name="com.jlbennett.flashbotany.flash.InfoFragment"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageButton
-                android:id="@+id/submitButton"
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
-                android:elevation="4dp"
-                app:layout_constraintBottom_toTopOf="@+id/answerLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageLayout"
-                app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
-
-        <LinearLayout
                 android:id="@+id/imageLayout"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -119,7 +28,95 @@
                     android:id="@+id/galleryView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#000" />
+                    android:background="?android:attr/colorBackground" />
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/hintButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/custom"
+                android:text="Hints"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/answerLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageLayout" />
+
+        <LinearLayout
+                android:id="@+id/answerLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                    android:id="@+id/firstPairLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/familyButton1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/custom"
+                        android:text="Rosaceae"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                <Button
+                        android:id="@+id/familyButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/custom"
+                        android:text="Boraginaceae"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/secondPairLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/familyButton3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/custom"
+                        android:text="Asteraceae"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                <Button
+                        android:id="@+id/familyButton4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/custom"
+                        android:text="Lamiaceae"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

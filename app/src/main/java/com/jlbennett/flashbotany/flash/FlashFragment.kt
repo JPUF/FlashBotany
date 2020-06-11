@@ -27,28 +27,15 @@ class FlashFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_flash, container, false)
-        binding.familyButton1.setOnClickListener {
-            if (binding.infoFragment.visibility == View.GONE)
-                binding.infoFragment.visibility = View.VISIBLE
-            else
-                binding.infoFragment.visibility = View.GONE
-        }
-
-        return binding.root
-    }
-
-    override fun onResume() {
-        super.onResume()
 
         val gallery = binding.galleryView
-        gallery.setThumbnailSize(300)
+        gallery.setThumbnailSize(150)
         gallery.setZoom(true)
         gallery.setFragmentManager(parentFragmentManager)
         gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.blackberry)))
         gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.rosa)))
         gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.lamium)))
-
-
         gallery.buildLayer()
+        return binding.root
     }
 }

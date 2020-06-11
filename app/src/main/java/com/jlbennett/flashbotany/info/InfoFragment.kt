@@ -1,4 +1,4 @@
-package com.jlbennett.flashbotany.flash
+package com.jlbennett.flashbotany.info
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
