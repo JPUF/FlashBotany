@@ -5,25 +5,10 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".flash.FlashFragment" android:id="@+id/constraint">
-
-        <ImageView
-                android:id="@+id/flowerImage"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/image_of_the_flower_to_be_guessed"
-                app:layout_constraintBottom_toTopOf="@+id/answerLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/blackberry" />
+            tools:context=".flash.FlashFragment">
 
         <LinearLayout
                 android:id="@+id/answerLayout"
@@ -107,12 +92,35 @@
                 android:id="@+id/submitButton"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
                 android:elevation="4dp"
                 app:layout_constraintBottom_toTopOf="@+id/answerLayout"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flowerImage"
+                app:layout_constraintTop_toBottomOf="@+id/imageLayout"
                 app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+        <LinearLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="64dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/answerLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <com.veinhorn.scrollgalleryview.ScrollGalleryView
+                    android:id="@+id/galleryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

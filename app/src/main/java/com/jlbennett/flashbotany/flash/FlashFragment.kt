@@ -1,16 +1,20 @@
 package com.jlbennett.flashbotany.flash
 
 
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.databinding.DataBindingUtil
+import com.veinhorn.scrollgalleryview.loader.picasso.dsl.DSL.image
 
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentFlashBinding
+import com.squareup.picasso.Picasso
+import com.veinhorn.scrollgalleryview.MediaInfo
+import com.veinhorn.scrollgalleryview.loader.DefaultImageLoader
 
 
 class FlashFragment : Fragment() {
@@ -31,5 +35,20 @@ class FlashFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val gallery = binding.galleryView
+        gallery.setThumbnailSize(300)
+        gallery.setZoom(true)
+        gallery.setFragmentManager(parentFragmentManager)
+        gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.blackberry)))
+        gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.rosa)))
+        gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.lamium)))
+
+
+        gallery.buildLayer()
     }
 }
