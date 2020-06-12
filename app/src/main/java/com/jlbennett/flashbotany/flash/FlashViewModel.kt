@@ -22,6 +22,10 @@ class FlashViewModel : ViewModel() {
             "https://cdn.britannica.com/60/175660-050-31EFCAF0/Flowers-blackberry.jpg",
             "https://4.bp.blogspot.com/-UVD44b6EnzA/WUh5xkpB2rI/AAAAAAAAbDc/SYRDKCabSiof7NrfKdGy_q1wXp_TKf6xQCLcBGAs/s1600/IMG_2324_2215.JPG"
         )
+
+        _familyList.value = listOf<String>(
+            "Lamiaceae", "Rosaceae", "Boraginaceae", "Asteraceae"
+        )
     }
 
 

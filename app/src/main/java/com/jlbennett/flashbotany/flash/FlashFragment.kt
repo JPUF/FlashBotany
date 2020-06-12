@@ -35,8 +35,6 @@ class FlashFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(FlashViewModel::class.java)
         gallery = binding.galleryView
 
-        setupGallery()
-
         binding.hintButton.setOnClickListener {
             val action = FlashFragmentDirections.actionFlashFragmentToInfoFragment()
             findNavController().navigate(action)
@@ -47,20 +45,20 @@ class FlashFragment : Fragment() {
             gallery.setThumbnailSize(150)
             gallery.setZoom(true)
             gallery.setFragmentManager(childFragmentManager)
-            gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.blackberry)))
-            gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.rosa)))
-            gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.lamium)))
+            //gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.blackberry)))
             imageURLs.forEach { url ->
-                Log.d("Flash VM", "url: $url")
                 gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader(url)))
             }
             gallery.buildLayer()
         })
 
+        viewModel.familyList.observe(viewLifecycleOwner, Observer { familyNames ->
+            binding.familyButton1.text = familyNames[0]
+            binding.familyButton2.text = familyNames[1]
+            binding.familyButton3.text = familyNames[2]
+            binding.familyButton4.text = familyNames[3]
+        })
+
         return binding.root
-    }
-
-    private fun setupGallery() {
-
     }
 }

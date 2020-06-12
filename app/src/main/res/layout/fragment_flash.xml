@@ -40,7 +40,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/custom"
-                android:text="Hints"
+                android:text="@string/hints"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/answerLayout"
@@ -74,11 +74,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
-                        android:layout_weight="1"
                         android:fontFamily="@font/custom"
-                        android:text="Rosaceae"
                         android:textAllCaps="false"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:text="Family Name 1" />
 
                 <Button
                         android:id="@+id/familyButton2"
@@ -86,11 +85,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
-                        android:layout_weight="1"
                         android:fontFamily="@font/custom"
-                        android:text="Boraginaceae"
                         android:textAllCaps="false"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:text="Family Name 2" />
             </LinearLayout>
 
             <LinearLayout
@@ -106,11 +104,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
-                        android:layout_weight="1"
                         android:fontFamily="@font/custom"
-                        android:text="Asteraceae"
                         android:textAllCaps="false"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:text="Family Name 3" />
 
                 <Button
                         android:id="@+id/familyButton4"
@@ -118,11 +115,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
-                        android:layout_weight="1"
                         android:fontFamily="@font/custom"
-                        android:text="Lamiaceae"
                         android:textAllCaps="false"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:text="Family Name 4" />
             </LinearLayout>
 
         </LinearLayout>

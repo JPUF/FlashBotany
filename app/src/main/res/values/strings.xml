@@ -6,4 +6,5 @@
     <string name="image_of_the_flower_to_be_guessed">Image of the flower to be guessed.</string>
     <string name="dummy_info">Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.</string>
     <string name="examples">Examples</string>
+    <string name="hints">Hints</string>
 </resources>
