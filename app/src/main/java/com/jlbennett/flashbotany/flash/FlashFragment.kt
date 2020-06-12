@@ -1,13 +1,13 @@
 package com.jlbennett.flashbotany.flash
 
 
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.veinhorn.scrollgalleryview.loader.picasso.dsl.DSL.image
 
 import com.jlbennett.flashbotany.R
@@ -28,6 +28,16 @@ class FlashFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_flash, container, false)
 
+        setupGallery()
+
+        binding.hintButton.setOnClickListener {
+            val action = FlashFragmentDirections.actionFlashFragmentToInfoFragment()
+            findNavController().navigate(action)
+        }
+        return binding.root
+    }
+
+    private fun setupGallery() {
         val gallery = binding.galleryView
         gallery.setThumbnailSize(150)
         gallery.setZoom(true)
@@ -36,6 +46,5 @@ class FlashFragment : Fragment() {
         gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.rosa)))
         gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.lamium)))
         gallery.buildLayer()
-        return binding.root
     }
 }
