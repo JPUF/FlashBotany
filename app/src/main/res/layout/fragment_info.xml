@@ -8,64 +8,52 @@
             android:id="@+id/constraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
             tools:context=".info.InfoFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tabMode="scrollable">
+                app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.tabs.TabItem
-                    android:id="@+id/familyTab1"
-                    android:layout_width="wrap_content"
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rosaceae" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabMode="scrollable">
 
-            <com.google.android.material.tabs.TabItem
-                    android:id="@+id/familyTab2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Asteraceae" />
+                <com.google.android.material.tabs.TabItem
+                        android:id="@+id/familyTab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rosaceae" />
 
-            <com.google.android.material.tabs.TabItem
-                    android:id="@+id/familyTab3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Boraginaceae" />
+                <com.google.android.material.tabs.TabItem
+                        android:id="@+id/familyTab2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Asteraceae" />
 
-            <com.google.android.material.tabs.TabItem
-                    android:id="@+id/familyTab4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lamiaceae" />
-        </com.google.android.material.tabs.TabLayout>
+                <com.google.android.material.tabs.TabItem
+                        android:id="@+id/familyTab3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Boraginaceae" />
 
-        <TextView
-                android:id="@+id/familyNameText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/custom"
-                android:text="Rosaceae"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+                <com.google.android.material.tabs.TabItem
+                        android:id="@+id/familyTab4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lamiaceae" />
+            </com.google.android.material.tabs.TabLayout>
 
-        <TextView
-                android:id="@+id/infoText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/dummy_info"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/familyNameText" />
+        </androidx.viewpager.widget.ViewPager>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

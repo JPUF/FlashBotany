@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager.widget.ViewPager
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentInfoBinding
 
@@ -13,6 +16,7 @@ import com.jlbennett.flashbotany.databinding.FragmentInfoBinding
 class InfoFragment : Fragment() {
 
     private lateinit var binding: FragmentInfoBinding
+    private lateinit var pager: ViewPager
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +25,21 @@ class InfoFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_info, container, false)
+        pager = binding.pager
 
+        val pagerAdapter = InfoPageAdapter(childFragmentManager)
+        pager.adapter = pagerAdapter
         return binding.root
+    }
+
+    private inner class InfoPageAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
+        override fun getCount(): Int = 4
+
+        val names = listOf<String>("Rosaceae", "Asteraceae", "Boraginaceae", "Lamiaceae")
+        override fun getItem(position: Int): Fragment = InfoPageFragment(names[position])
+
+        override fun getPageTitle(position: Int): CharSequence? {
+            return names[position]
+        }
     }
 }
