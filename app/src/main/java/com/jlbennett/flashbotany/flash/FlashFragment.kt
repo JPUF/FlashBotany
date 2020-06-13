@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -40,6 +41,13 @@ class FlashFragment : Fragment() {
             findNavController().navigate(action)
         }
 
+        binding.firstPairLayout.children.forEach { button ->
+            button.setOnClickListener { onAnswerClick() }
+        }
+        binding.secondPairLayout.children.forEach { button ->
+            button.setOnClickListener { onAnswerClick() }
+        }
+        binding.nextButton.setOnClickListener { nextFlower() }
 
         viewModel.imageList.observe(viewLifecycleOwner, Observer { imageURLs ->
             gallery.setThumbnailSize(150)
@@ -60,5 +68,22 @@ class FlashFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    private fun onAnswerClick() {
+        //TODO animate crossfade: https://developer.android.com/training/animation/reveal-or-hide-view
+        binding.answerLayout.visibility = View.INVISIBLE
+        binding.feedbackText.visibility = View.VISIBLE
+        binding.speciesText.visibility = View.VISIBLE
+        binding.correctFamilyText.visibility = View.VISIBLE
+        binding.nextButton.visibility = View.VISIBLE
+    }
+
+    private fun nextFlower() {
+        binding.answerLayout.visibility = View.VISIBLE
+        binding.feedbackText.visibility = View.INVISIBLE
+        binding.speciesText.visibility = View.INVISIBLE
+        binding.correctFamilyText.visibility = View.INVISIBLE
+        binding.nextButton.visibility = View.INVISIBLE
     }
 }

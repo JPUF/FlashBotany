@@ -28,7 +28,7 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
         binding.titleText.text = familyName
 
         Log.d("InfoPage l", "onCreateView: $familyName")
-        //TODO fix image loading bug. 
+        //TODO fix image loading bug.
         gallery = binding.galleryView
         gallery.setThumbnailSize(150)
         gallery.setZoom(true)

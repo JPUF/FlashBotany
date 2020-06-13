@@ -7,4 +7,6 @@
     <string name="dummy_info">Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.</string>
     <string name="examples">Examples</string>
     <string name="hints">Hints</string>
+    <string name="correct">Correct!</string>
+    <string name="next">Next</string>
 </resources>
