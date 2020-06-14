@@ -1,12 +1,15 @@
 package com.jlbennett.flashbotany.flash
 
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -26,6 +29,7 @@ class FlashFragment : Fragment() {
     private lateinit var binding: FragmentFlashBinding
     private lateinit var viewModel: FlashViewModel
     private lateinit var gallery: ScrollGalleryView
+    private var animationDuration: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +39,7 @@ class FlashFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_flash, container, false)
         viewModel = ViewModelProvider(this).get(FlashViewModel::class.java)
         gallery = binding.galleryView
+        animationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
 
         binding.hintButton.setOnClickListener {
             val action = FlashFragmentDirections.actionFlashFragmentToInfoFragment()
@@ -72,18 +77,45 @@ class FlashFragment : Fragment() {
 
     private fun onAnswerClick() {
         //TODO animate crossfade: https://developer.android.com/training/animation/reveal-or-hide-view
-        binding.answerLayout.visibility = View.INVISIBLE
-        binding.feedbackText.visibility = View.VISIBLE
-        binding.speciesText.visibility = View.VISIBLE
-        binding.correctFamilyText.visibility = View.VISIBLE
-        binding.nextButton.visibility = View.VISIBLE
+        //TODO Test with View.GONE for better performance.
+//        binding.answerLayout.visibility = View.INVISIBLE
+//        binding.feedbackLayout.visibility = View.VISIBLE
+        crossfadeViews(R.id.feedbackLayout)
     }
 
     private fun nextFlower() {
-        binding.answerLayout.visibility = View.VISIBLE
-        binding.feedbackText.visibility = View.INVISIBLE
-        binding.speciesText.visibility = View.INVISIBLE
-        binding.correctFamilyText.visibility = View.INVISIBLE
-        binding.nextButton.visibility = View.INVISIBLE
+//        binding.answerLayout.visibility = View.VISIBLE
+//        binding.feedbackLayout.visibility = View.INVISIBLE
+        crossfadeViews(R.id.answerLayout)
+    }
+
+    private fun crossfadeViews(targetViewID : Int) {
+        val targetView: View; val visibleView: View
+        if(targetViewID == R.id.feedbackLayout){
+            targetView = binding.feedbackLayout
+            visibleView = binding.answerLayout
+        } else {
+            targetView = binding.answerLayout
+            visibleView = binding.feedbackLayout
+        }
+
+        targetView.apply {
+            alpha = 0f
+            visibility = View.VISIBLE
+
+            animate()
+                .alpha(1f)
+                .setDuration(animationDuration.toLong())
+                .setListener(null)
+        }
+
+        visibleView.animate()
+            .alpha(1f)
+            .setDuration(animationDuration.toLong())
+            .setListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationEnd(animation: Animator?) {
+                    visibleView.visibility = View.INVISIBLE
+                }
+            })
     }
 }

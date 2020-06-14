@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/custom"
                 android:text="@string/hints"
@@ -120,72 +120,72 @@
 
         </LinearLayout>
 
-        <TextView
-                android:id="@+id/feedbackText"
-                android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/feedbackLayout"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/custom"
-                android:text="@string/correct"
-                android:textSize="24sp"
-                android:textStyle="bold"
                 android:visibility="invisible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hintButton"
-                tools:visibility="visible" />
-
-        <TextView
-                android:id="@+id/correctFamilyText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:fontFamily="@font/custom"
-                android:text="It's Boraginaceae"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:visibility="invisible"
-                app:layout_constraintBaseline_toBaselineOf="@+id/feedbackText"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/feedbackText"
-                tools:text="Correct Family"
-                tools:visibility="visible" />
-
-        <TextView
-                android:id="@+id/speciesText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/custom"
-                android:gravity="bottom"
-                android:text="Species Name"
-                android:textSize="18sp"
-                android:textStyle="italic"
-                android:visibility="invisible"
-                app:layout_constraintBaseline_toBaselineOf="@+id/nextButton"
-                app:layout_constraintEnd_toStartOf="@+id/nextButton"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:text="Species Name"
-                tools:visibility="visible" />
-
-        <Button
-                android:id="@+id/nextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/custom"
-                android:text="@string/next"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                android:visibility="invisible"
-                app:icon="@drawable/ic_baseline_arrow_forward_24"
-                app:iconGravity="end|textEnd"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:visibility="visible" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintButton"
+                tools:visibility="visible">
+
+            <TextView
+                    android:id="@+id/feedbackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/custom"
+                    android:text="@string/correct"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/correctFamilyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/custom"
+                    android:text="It's Boraginaceae"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/feedbackText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/feedbackText" />
+
+            <TextView
+                    android:id="@+id/speciesText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/custom"
+                    android:text="Species Name"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/nextButton"
+                    app:layout_constraintEnd_toStartOf="@+id/nextButton"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                    android:id="@+id/nextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/custom"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
