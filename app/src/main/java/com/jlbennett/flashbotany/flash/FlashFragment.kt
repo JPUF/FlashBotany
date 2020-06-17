@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -20,9 +19,9 @@ import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentFlashBinding
 import com.veinhorn.scrollgalleryview.MediaInfo
 import com.veinhorn.scrollgalleryview.ScrollGalleryView
-import com.veinhorn.scrollgalleryview.loader.DefaultImageLoader
 import com.veinhorn.scrollgalleryview.loader.picasso.PicassoImageLoader
 
+//TODO source copyright free images... iNat noCopy.
 
 class FlashFragment : Fragment() {
 
@@ -62,6 +61,7 @@ class FlashFragment : Fragment() {
             imageURLs.forEach { url ->
                 gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader(url)))
             }
+            gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader("https://static.inaturalist.org/photos/43624500/original.jpeg")))
             gallery.buildLayer()
         })
 
@@ -76,16 +76,11 @@ class FlashFragment : Fragment() {
     }
 
     private fun onAnswerClick() {
-        //TODO animate crossfade: https://developer.android.com/training/animation/reveal-or-hide-view
-        //TODO Test with View.GONE for better performance.
-//        binding.answerLayout.visibility = View.INVISIBLE
-//        binding.feedbackLayout.visibility = View.VISIBLE
+        //TODO improve animation. Maybe a horizontal swipe or smth
         crossfadeViews(R.id.feedbackLayout)
     }
 
     private fun nextFlower() {
-//        binding.answerLayout.visibility = View.VISIBLE
-//        binding.feedbackLayout.visibility = View.INVISIBLE
         crossfadeViews(R.id.answerLayout)
     }
 

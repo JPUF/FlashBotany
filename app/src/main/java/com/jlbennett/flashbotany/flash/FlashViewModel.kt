@@ -16,7 +16,6 @@ class FlashViewModel : ViewModel() {
         get() = _familyList
 
     init {
-        Log.d("Flash VM", "ViewModel init")
         _imageList.value = listOf<String>(
             "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Rubus_fruticosus_Luc_Viatour.JPG/1280px-Rubus_fruticosus_Luc_Viatour.JPG",
             "https://cdn.britannica.com/60/175660-050-31EFCAF0/Flowers-blackberry.jpg",
@@ -30,3 +29,4 @@ class FlashViewModel : ViewModel() {
 
 
 }
+
