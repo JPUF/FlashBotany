@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentInfoPageBinding
 import com.jlbennett.flashbotany.data.Examples
+import com.jlbennett.flashbotany.data.Family
 import com.veinhorn.scrollgalleryview.MediaInfo
 import com.veinhorn.scrollgalleryview.ScrollGalleryView
 import com.veinhorn.scrollgalleryview.loader.picasso.PicassoImageLoader
@@ -32,8 +33,8 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
         gallery.setThumbnailSize(150)
         gallery.setZoom(true)
         gallery.setFragmentManager(childFragmentManager)
-
-        Examples.families[familyName]?.exampleImageURLs?.forEach { url ->
+        val currentFamily = Examples().getFamilyByName(familyName)
+        currentFamily.exampleImageURLs.forEach { url ->
             gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader(url)))
         }
 

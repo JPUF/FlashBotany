@@ -4,12 +4,12 @@ package com.jlbennett.flashbotany.flash
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.children
+import androidx.core.view.size
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -51,17 +51,17 @@ class FlashFragment : Fragment() {
         binding.secondPairLayout.children.forEach { button ->
             button.setOnClickListener { onAnswerClick() }
         }
-        binding.nextButton.setOnClickListener { nextFlower() }
+        binding.nextButton.setOnClickListener { onNextClick() }
 
-        viewModel.imageList.observe(viewLifecycleOwner, Observer { imageURLs ->
+        viewModel.currentSpecies.observe(viewLifecycleOwner, Observer { species ->
+            removeImagesFromGallery()
             gallery.setThumbnailSize(150)
             gallery.setZoom(true)
             gallery.setFragmentManager(childFragmentManager)
             //gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.blackberry)))
-            imageURLs.forEach { url ->
+            species.imageURLs.forEach { url ->
                 gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader(url)))
             }
-            gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader("https://static.inaturalist.org/photos/43624500/original.jpeg")))
             gallery.buildLayer()
         })
 
@@ -75,12 +75,20 @@ class FlashFragment : Fragment() {
         return binding.root
     }
 
+    //TODO change to use a different image library. Maybe Fresco.
+    private fun removeImagesFromGallery() {
+        for(i in 0 until gallery.childCount){
+            gallery.removeMedia(i)
+        }
+    }
+
     private fun onAnswerClick() {
         //TODO improve animation. Maybe a horizontal swipe or smth
         crossfadeViews(R.id.feedbackLayout)
     }
 
-    private fun nextFlower() {
+    private fun onNextClick() {
+        viewModel.nextFlower()
         crossfadeViews(R.id.answerLayout)
     }
 

@@ -1,9 +1,14 @@
 package com.jlbennett.flashbotany.data
 
 class Examples {
+
+    enum class Families{
+        ASTERACEAE, LAMIACEAE, ROSACEAE, BORAGINACEAE
+    }
+
     companion object {
-        val families = hashMapOf<String, Family>(
-            "Asteraceae" to Family(
+        val families = listOf<Family>(
+            Family(
                 "Asteraceae",
                 "Info for asters",
                 listOf(//Example image URLs
@@ -34,7 +39,7 @@ class Examples {
                     )
                 )
             ),
-            "Boraginaceae" to Family(
+            Family(
                 "Boraginaceae",
                 "Info for borages",
                 listOf(
@@ -65,7 +70,7 @@ class Examples {
                     )
                 )
             ),
-            "Lamiaceae" to Family(
+            Family(
                 "Lamiaceae",
                 "Info on lamiaceous plants",
                 listOf(
@@ -89,7 +94,7 @@ class Examples {
                     )
                 )
             ),
-            "Rosaceae" to Family(
+            Family(
                 "Rosaceae",
                 "Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.",
                 listOf(
@@ -137,5 +142,13 @@ class Examples {
                 )
             )
         )
+    }
+
+    fun getFamilyByName(name: String): Family {
+        families.forEach {
+            if(it.name == name)
+                return it
+        }
+        return families[0]
     }
 }
