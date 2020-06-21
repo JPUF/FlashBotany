@@ -14,6 +14,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.models.SlideModel
 
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentFlashBinding
@@ -27,7 +29,7 @@ class FlashFragment : Fragment() {
 
     private lateinit var binding: FragmentFlashBinding
     private lateinit var viewModel: FlashViewModel
-    private lateinit var gallery: ScrollGalleryView
+    private lateinit var imageSlider: ImageSlider
     private var animationDuration: Int = 0
 
     override fun onCreateView(
@@ -37,7 +39,8 @@ class FlashFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_flash, container, false)
         viewModel = ViewModelProvider(this).get(FlashViewModel::class.java)
-        gallery = binding.galleryView
+        imageSlider = binding.imageSlider
+
         animationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
 
         binding.hintButton.setOnClickListener {
@@ -54,15 +57,11 @@ class FlashFragment : Fragment() {
         binding.nextButton.setOnClickListener { onNextClick() }
 
         viewModel.currentSpecies.observe(viewLifecycleOwner, Observer { species ->
-            removeImagesFromGallery()
-            gallery.setThumbnailSize(150)
-            gallery.setZoom(true)
-            gallery.setFragmentManager(childFragmentManager)
-            //gallery.addMedia(MediaInfo.mediaLoader(DefaultImageLoader(R.drawable.blackberry)))
+            val imageList = ArrayList<SlideModel>()
             species.imageURLs.forEach { url ->
-                gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader(url)))
+                imageList.add(SlideModel(url))
             }
-            gallery.buildLayer()
+            imageSlider.setImageList(imageList, false)
         })
 
         viewModel.familyList.observe(viewLifecycleOwner, Observer { familyNames ->
@@ -76,11 +75,6 @@ class FlashFragment : Fragment() {
     }
 
     //TODO change to use a different image library. Maybe Fresco. Maybe Image Slider APIs. https://github.com/smarteist/Android-Image-Slider
-    private fun removeImagesFromGallery() {
-        for(i in 0 .. gallery.childCount){
-            gallery.removeMedia(i)
-        }
-    }
 
     private fun onAnswerClick() {
         //TODO improve animation. Maybe a horizontal swipe or smth
@@ -92,9 +86,10 @@ class FlashFragment : Fragment() {
         crossfadeViews(R.id.answerLayout)
     }
 
-    private fun crossfadeViews(targetViewID : Int) {
-        val targetView: View; val visibleView: View
-        if(targetViewID == R.id.feedbackLayout){
+    private fun crossfadeViews(targetViewID: Int) {
+        val targetView: View;
+        val visibleView: View
+        if (targetViewID == R.id.feedbackLayout) {
             targetView = binding.feedbackLayout
             visibleView = binding.answerLayout
         } else {

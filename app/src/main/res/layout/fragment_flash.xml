@@ -24,11 +24,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-            <com.veinhorn.scrollgalleryview.ScrollGalleryView
-                    android:id="@+id/galleryView"
+            <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="?android:attr/colorBackground" />
+                    app:auto_cycle="false"
+                    app:corner_radius="20" />
         </LinearLayout>
 
         <Button
