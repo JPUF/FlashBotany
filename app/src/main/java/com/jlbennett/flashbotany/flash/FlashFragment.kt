@@ -75,9 +75,9 @@ class FlashFragment : Fragment() {
         return binding.root
     }
 
-    //TODO change to use a different image library. Maybe Fresco.
+    //TODO change to use a different image library. Maybe Fresco. Maybe Image Slider APIs. https://github.com/smarteist/Android-Image-Slider
     private fun removeImagesFromGallery() {
-        for(i in 0 until gallery.childCount){
+        for(i in 0 .. gallery.childCount){
             gallery.removeMedia(i)
         }
     }
