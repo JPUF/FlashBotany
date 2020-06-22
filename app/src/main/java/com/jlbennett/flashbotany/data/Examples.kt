@@ -2,10 +2,6 @@ package com.jlbennett.flashbotany.data
 
 class Examples {
 
-    enum class Families{
-        ASTERACEAE, LAMIACEAE, ROSACEAE, BORAGINACEAE
-    }
-
     companion object {
         val families = listOf<Family>(
             Family(
@@ -98,11 +94,11 @@ class Examples {
                 "Rosaceae",
                 "Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.",
                 listOf(
-                    "https://www.wildlifetrusts.org/sites/default/files/styles/node_hero_default/public/2018-01/wood_avens-00003%20northeastwildlife.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Fragaria_vesca_Jahodn%C3%ADk_obecn%C3%BD_1.jpg/1280px-Fragaria_vesca_Jahodn%C3%ADk_obecn%C3%BD_1.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/a/ac/Malus_asiatica_1.jpg",
-                    "https://newfs.s3.amazonaws.com/taxon-images-1000s1000/Rosaceae/argentina-anserina-st-cpeirce.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Rosa_rugosa_2010.jpg/1280px-Rosa_rugosa_2010.jpg"
+                    "https://static.inaturalist.org/photos/70328000/original.jpeg?1588245875",
+                    "https://static.inaturalist.org/photos/47763529/original.jpeg?1565472962",
+                    "https://static.inaturalist.org/photos/70818504/original.jpeg?1588465954",
+                    "https://static.inaturalist.org/photos/43664692/original.jpeg?1562026303",
+                    "https://static.inaturalist.org/photos/41131329/original.jpeg?1559812391"
                 ),
                 listOf<Species>(
                     Species(
@@ -145,9 +141,9 @@ class Examples {
     }
 
     fun getFamilyByName(name: String): Family {
-        families.forEach {
-            if(it.name == name)
-                return it
+        families.forEach { family ->
+            if(family.name == name)
+                return family
         }
         return families[0]
     }

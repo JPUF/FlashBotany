@@ -10,12 +10,8 @@ import androidx.fragment.app.Fragment
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.jlbennett.flashbotany.R
-import com.jlbennett.flashbotany.databinding.FragmentInfoPageBinding
 import com.jlbennett.flashbotany.data.Examples
-import com.jlbennett.flashbotany.data.Family
-import com.veinhorn.scrollgalleryview.MediaInfo
-import com.veinhorn.scrollgalleryview.ScrollGalleryView
-import com.veinhorn.scrollgalleryview.loader.picasso.PicassoImageLoader
+import com.jlbennett.flashbotany.databinding.FragmentInfoPageBinding
 
 class InfoPageFragment(private val familyName: String) : Fragment() {
 
@@ -37,7 +33,7 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
         currentFamily.exampleImageURLs.forEach { url ->
             imageList.add(SlideModel(url))
         }
-        imageSlider.setImageList(imageList)
+        imageSlider.setImageList(imageList, true)
 
         return binding.root
     }

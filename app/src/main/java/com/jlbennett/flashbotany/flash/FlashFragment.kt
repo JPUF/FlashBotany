@@ -4,24 +4,19 @@ package com.jlbennett.flashbotany.flash
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.children
-import androidx.core.view.size
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
-
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentFlashBinding
-import com.veinhorn.scrollgalleryview.MediaInfo
-import com.veinhorn.scrollgalleryview.ScrollGalleryView
-import com.veinhorn.scrollgalleryview.loader.picasso.PicassoImageLoader
 
 //TODO source copyright free images... iNat noCopy.
 
