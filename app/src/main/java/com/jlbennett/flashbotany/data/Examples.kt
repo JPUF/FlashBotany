@@ -8,8 +8,11 @@ class Examples {
                 "Asteraceae",
                 "Info for asters",
                 listOf(//Example image URLs
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Daisy_G%C3%A4nsebl%C3%BCmchen_Bellis_perennis_01.jpg/1200px-Daisy_G%C3%A4nsebl%C3%BCmchen_Bellis_perennis_01.jpg",
-                    "https://wildflowerfinder.org.uk/Flowers/R/Ragwort(Oxford)/Ragwort(Oxford)_2009_08_02_Pendleton_ExWindorHighSchool_118p1.jpg"
+                    "https://static.inaturalist.org/photos/65765123/original.jpeg?1586105726",
+                    "https://static.inaturalist.org/photos/71124906/original.jpeg?1588593480",
+                    "https://static.inaturalist.org/photos/76953897/original.jpeg?1591319115",
+                    "https://static.inaturalist.org/photos/65757798/original.jpeg?1586102360",
+                    "https://static.inaturalist.org/photos/39779860/original.jpeg?1558692337"
                 ),
                 listOf<Species>(
                     Species(
@@ -39,8 +42,10 @@ class Examples {
                 "Boraginaceae",
                 "Info for borages",
                 listOf(
-                    "https://www.watersidenursery.co.uk/media/catalog/product/cache/db3a0a9b2b4fdd682ab19d7131c1bbda/m/y/myosotisscorpioides_1-lge.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/7/79/Boraginaceae_-_Buglossoides_purpurocaerulea.JPG"
+                    "https://static.inaturalist.org/photos/44619331/original.jpg?1562857776",
+                    "https://static.inaturalist.org/photos/79873797/original.jpg?1592677671",
+                    "https://static.inaturalist.org/photos/79588520/original.jpeg?1592538325",
+                    "https://static.inaturalist.org/photos/79782716/original.jpeg?1592643932"
                 ),
                 listOf<Species>(
                     Species(
@@ -66,12 +71,15 @@ class Examples {
                     )
                 )
             ),
+            //TODO good examples for all actual species..
             Family(
                 "Lamiaceae",
                 "Info on lamiaceous plants",
                 listOf(
                     "https://img.crocdn.co.uk/images/products2/pl/10/00/00/07/pl1000000744.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ajuga_reptans_LC0138.jpg/1200px-Ajuga_reptans_LC0138.jpg"
+                    "https://static.inaturalist.org/photos/66819729/original.jpeg?1586795474",
+                    "https://static.inaturalist.org/photos/77236009/original.jpeg?1591462361",
+                    "https://static.inaturalist.org/photos/77860257/original.jpg?1591731111"
                 ),
                 listOf<Species>(
                     Species(
