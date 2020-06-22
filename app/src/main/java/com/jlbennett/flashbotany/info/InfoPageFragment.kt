@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.models.SlideModel
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentInfoPageBinding
 import com.jlbennett.flashbotany.data.Examples
@@ -18,7 +20,7 @@ import com.veinhorn.scrollgalleryview.loader.picasso.PicassoImageLoader
 class InfoPageFragment(private val familyName: String) : Fragment() {
 
     private lateinit var binding: FragmentInfoPageBinding
-    private lateinit var gallery: ScrollGalleryView
+    private lateinit var imageSlider: ImageSlider
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,16 +31,13 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
 
         Log.d("InfoPage l", "onCreateView: $familyName")
         //TODO fix image loading bug.
-        gallery = binding.galleryView
-        gallery.setThumbnailSize(150)
-        gallery.setZoom(true)
-        gallery.setFragmentManager(childFragmentManager)
+        imageSlider = binding.imageSlider
         val currentFamily = Examples().getFamilyByName(familyName)
+        val imageList = ArrayList<SlideModel>()
         currentFamily.exampleImageURLs.forEach { url ->
-            gallery.addMedia(MediaInfo.mediaLoader(PicassoImageLoader(url)))
+            imageList.add(SlideModel(url))
         }
-
-        gallery.buildLayer()
+        imageSlider.setImageList(imageList)
 
         return binding.root
     }

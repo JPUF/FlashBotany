@@ -61,7 +61,8 @@ class FlashFragment : Fragment() {
             species.imageURLs.forEach { url ->
                 imageList.add(SlideModel(url))
             }
-            imageSlider.setImageList(imageList, false)
+            imageSlider.setImageList(imageList, true)
+            //Get cropping right.
         })
 
         viewModel.familyList.observe(viewLifecycleOwner, Observer { familyNames ->
@@ -73,8 +74,6 @@ class FlashFragment : Fragment() {
 
         return binding.root
     }
-
-    //TODO change to use a different image library. Maybe Fresco. Maybe Image Slider APIs. https://github.com/smarteist/Android-Image-Slider
 
     private fun onAnswerClick() {
         //TODO improve animation. Maybe a horizontal swipe or smth
