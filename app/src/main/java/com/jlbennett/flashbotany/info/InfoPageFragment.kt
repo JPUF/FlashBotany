@@ -24,9 +24,6 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_info_page, container, false)
         binding.titleText.text = familyName
-
-        Log.d("InfoPage l", "onCreateView: $familyName")
-        //TODO fix image loading bug.
         imageSlider = binding.imageSlider
         val currentFamily = Examples().getFamilyByName(familyName)
         val imageList = ArrayList<SlideModel>()
@@ -34,17 +31,8 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
             imageList.add(SlideModel(url))
         }
         imageSlider.setImageList(imageList, true)
+        binding.infoText.text = currentFamily.info
 
         return binding.root
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("InfoPage l", "onPause: $familyName")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("InfoPage l", "onResume: $familyName")
     }
 }

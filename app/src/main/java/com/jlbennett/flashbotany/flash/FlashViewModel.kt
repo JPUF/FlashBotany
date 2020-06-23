@@ -18,17 +18,12 @@ class FlashViewModel : ViewModel() {
         get() = _currentSpecies
 
 
-    private val _familyList = MutableLiveData<List<String>>()
-    val familyList: LiveData<List<String>>
+    private val _familyList = MutableLiveData<List<Family>>()
+    val familyList: LiveData<List<Family>>
         get() = _familyList
 
     init {
         nextFlower()
-
-        //TODO family list should be based off the guessable family in FlashFragment
-        _familyList.value = listOf<String>(
-            "Lamiaceae", "Rosaceae", "Boraginaceae", "Asteraceae"
-        )
     }
 
     fun nextFlower() {
@@ -37,7 +32,18 @@ class FlashViewModel : ViewModel() {
 
         val randomSpeciesIndex = (_currentFamily.value!!.members.indices).random()
         _currentSpecies.value = _currentFamily.value!!.members[randomSpeciesIndex]
+        randomiseFamilyList()
+    }
 
+    private fun randomiseFamilyList() {
+        val tempFamilyList = mutableListOf<Family>()
+        while(tempFamilyList.size < 3) {
+            val randomFamily = Examples.families.random()
+            if (randomFamily != _currentFamily.value && randomFamily !in tempFamilyList)
+                tempFamilyList.add(randomFamily)
+        }
+        tempFamilyList.add((0..2).random(), _currentFamily.value!!)
+        _familyList.value = tempFamilyList.toList()
     }
 }
 

@@ -57,14 +57,13 @@ class FlashFragment : Fragment() {
                 imageList.add(SlideModel(url))
             }
             imageSlider.setImageList(imageList, true)
-            //Get cropping right.
         })
 
-        viewModel.familyList.observe(viewLifecycleOwner, Observer { familyNames ->
-            binding.familyButton1.text = familyNames[0]
-            binding.familyButton2.text = familyNames[1]
-            binding.familyButton3.text = familyNames[2]
-            binding.familyButton4.text = familyNames[3]
+        viewModel.familyList.observe(viewLifecycleOwner, Observer { families ->
+            binding.familyButton1.text = families[0].name
+            binding.familyButton2.text = families[1].name
+            binding.familyButton3.text = families[2].name
+            binding.familyButton4.text = families[3].name
         })
 
         return binding.root
