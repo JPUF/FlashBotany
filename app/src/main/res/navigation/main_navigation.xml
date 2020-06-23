@@ -28,5 +28,9 @@
             android:id="@+id/infoFragment"
             android:name="com.jlbennett.flashbotany.info.InfoFragment"
             android:label="InfoFragment"
-            tools:layout="@layout/fragment_info" />
+            tools:layout="@layout/fragment_info" >
+        <argument
+                android:name="familyNames"
+                app:argType="string[]" />
+    </fragment>
 </navigation>

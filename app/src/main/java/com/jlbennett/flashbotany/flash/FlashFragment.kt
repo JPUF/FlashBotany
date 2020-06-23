@@ -19,13 +19,14 @@ import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentFlashBinding
 
 //TODO source copyright free images... iNat noCopy.
-
+//TODO fix the name selection issue.. (all four families are the same)
 class FlashFragment : Fragment() {
 
     private lateinit var binding: FragmentFlashBinding
     private lateinit var viewModel: FlashViewModel
     private lateinit var imageSlider: ImageSlider
     private var animationDuration: Int = 0
+    private var familyNames = ArrayList<String>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +40,7 @@ class FlashFragment : Fragment() {
         animationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
 
         binding.hintButton.setOnClickListener {
-            val action = FlashFragmentDirections.actionFlashFragmentToInfoFragment()
+            val action = FlashFragmentDirections.actionFlashFragmentToInfoFragment(familyNames.toTypedArray())
             findNavController().navigate(action)
         }
 
@@ -60,10 +61,11 @@ class FlashFragment : Fragment() {
         })
 
         viewModel.familyList.observe(viewLifecycleOwner, Observer { families ->
-            binding.familyButton1.text = families[0].name
-            binding.familyButton2.text = families[1].name
-            binding.familyButton3.text = families[2].name
-            binding.familyButton4.text = families[3].name
+            familyNames = arrayListOf(families[0].name, families[1].name, families[2].name, families[3].name)
+            binding.familyButton1.text = familyNames[0]
+            binding.familyButton2.text = familyNames[0]
+            binding.familyButton3.text = familyNames[0]
+            binding.familyButton4.text = familyNames[0]
         })
 
         return binding.root
