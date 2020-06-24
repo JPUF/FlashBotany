@@ -63,9 +63,9 @@ class FlashFragment : Fragment() {
         viewModel.familyList.observe(viewLifecycleOwner, Observer { families ->
             familyNames = arrayListOf(families[0].name, families[1].name, families[2].name, families[3].name)
             binding.familyButton1.text = familyNames[0]
-            binding.familyButton2.text = familyNames[0]
-            binding.familyButton3.text = familyNames[0]
-            binding.familyButton4.text = familyNames[0]
+            binding.familyButton2.text = familyNames[1]
+            binding.familyButton3.text = familyNames[2]
+            binding.familyButton4.text = familyNames[3]
         })
 
         return binding.root
