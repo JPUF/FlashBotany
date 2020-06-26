@@ -123,24 +123,86 @@ class Examples {
                             "https://upload.wikimedia.org/wikipedia/commons/5/5c/Cotoneaster_horizontalis_10.jpg"
                         )
                     ),
-                    Species("Potentilla reptans", "Creeping Cinquefoil",
+                    Species(
+                        "Potentilla reptans", "Creeping Cinquefoil",
                         listOf(
                             "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Potentilla_reptans_beauvais-carriere-bracheux_60_20062008_1.jpg/1920px-Potentilla_reptans_beauvais-carriere-bracheux_60_20062008_1.jpg",
                             "https://warehouse1.indicia.org.uk/upload/Cinquefoil,%20Creeping%20(Potentilla%20reptans)%20Leicester%20Road%20before%20Quarry%20Sapcote%20SP%204950%209335%20(taken%203.6.2007),..JPG",
                             "https://www.ukwildflowers.com/Web_photos_NOP/potentilla_reptans_creeping_cinquefoil_close.jpg"
                         )
                     ),
-                    Species("Potentilla sterilis", "Barren Strawberry",
+                    Species(
+                        "Potentilla sterilis", "Barren Strawberry",
                         listOf(
                             "https://www.first-nature.com/flowers/images/potentilla-sterilis1.jpg",
                             "https://lh3.googleusercontent.com/proxy/IMZnF4lsa2iwq7izHpBJfnOy4BYxysr4QsN9OAGWOVsdLpBx9CqDoWlMw7D9RQFwo2mgfoFfpiAv1tsqn_HuqlqKt2PzCQFIL91FDq-MDIJ8_1zLhwaXNxgpJI9bs_ub_bCZozIpCA"
                         )
                     ),
-                    Species("Prunus spinosa", "Blackthorn",
+                    Species(
+                        "Prunus spinosa", "Blackthorn",
                         listOf(
                             "https://warehouse1.indicia.org.uk/upload/p15s8a1ngi11p91bi2saj571dulk.jpg",
                             "https://warehouse1.indicia.org.uk/upload/o_1e4dpsfoh3fk1ms01ifgg8qkgee.jpg",
                             "https://warehouse1.indicia.org.uk/upload/Blackthorn%20(Prunus%20spinosa),%20Old%20Fosse%20Sapcote%20SP%204973%209206%20(taken%209.4.2009).jpg"
+                        )
+                    )
+                )
+            ),
+            Family(
+                "Brassicaceae",
+                "Brassica info",
+                listOf(
+                    "https://static.inaturalist.org/photos/35376196/original.jpg?1555867097",//Jointed charlock
+                    "https://static.inaturalist.org/photos/63135310/original.jpg?1583792581",//Purple Rock Cress
+                    "https://static.inaturalist.org/photos/29748312/original.jpeg?1546311918"//Cabbage
+                ),
+                listOf<Species>(
+                    Species(
+                        "Lunaria annua", "Annual Honesty",
+                        listOf(
+                            "https://static.inaturalist.org/photos/66842215/original.jpeg?1586807018",
+                            "https://static.inaturalist.org/photos/68987725/original.jpg?1587856148"
+                        )
+                    ),
+                    Species(
+                        "Alliaria petiolata", "Garlic Mustard",
+                        listOf(
+                            "https://static.inaturalist.org/photos/66493624/original.jpeg?1586612038",
+                            "https://static.inaturalist.org/photos/74079425/original.jpeg?1590059026"
+                        )
+                    )
+                )
+            ),
+            Family(
+                "Fabaceae",
+                "Legume info",
+                listOf(
+                    "https://static.inaturalist.org/photos/79460695/original.jpg?1592486073",//Broad leaved sweet pea
+                    "https://static.inaturalist.org/photos/47733394/original.jpeg?1565456441",//Bush Vetch
+                    "https://static.inaturalist.org/photos/71863484/original.jpg?1588984530" //Black medick
+                ),
+                listOf<Species>(
+                    Species(
+                        "Ulex europaeus", "Gorse",
+                        listOf(
+                            "https://static.inaturalist.org/photos/44275088/original.jpeg?1562545918",
+                            "https://static.inaturalist.org/photos/33818525/original.jpg?1554048362",
+                            "https://static.inaturalist.org/photos/18120970/original.jpg?1526570566"
+                        )
+                    ),
+                    Species(
+                        "Lotus corniculatus", "Bird's-foot Trefoil",
+                        listOf(
+                            "https://static.inaturalist.org/photos/78245543/original.jpg?1591927943",
+                            "https://static.inaturalist.org/photos/77377735/original.jpg?1591520970"
+                        )
+                    ),
+                    Species(
+                        "Medicago sativa", "Alfalfa",
+                        listOf(
+                            "https://static.inaturalist.org/photos/77332751/original.jpg?1591492860",
+                            "https://static.inaturalist.org/photos/77332792/original.jpg?1591492880",
+                            "https://static.inaturalist.org/photos/77332868/original.jpg?1591492920"
                         )
                     )
                 )
@@ -150,7 +212,7 @@ class Examples {
 
     fun getFamilyByName(name: String): Family {
         families.forEach { family ->
-            if(family.name == name)
+            if (family.name == name)
                 return family
         }
         return families[0]

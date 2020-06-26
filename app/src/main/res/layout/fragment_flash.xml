@@ -158,7 +158,7 @@
                     app:layout_constraintStart_toEndOf="@+id/feedbackText" />
 
             <TextView
-                    android:id="@+id/speciesText"
+                    android:id="@+id/scientificText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -166,11 +166,26 @@
                     android:fontFamily="@font/custom"
                     android:text="Species Name"
                     android:textSize="18sp"
-                    android:textStyle="italic"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/nextButton"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/vernacularText"
                     app:layout_constraintEnd_toStartOf="@+id/nextButton"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/feedbackText" />
+
+            <TextView
+                    android:id="@+id/vernacularText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/custom"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/nextButton"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text='"Vernacular Name"' />
 
             <Button
                     android:id="@+id/nextButton"

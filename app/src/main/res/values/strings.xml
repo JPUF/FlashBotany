@@ -8,5 +8,6 @@
     <string name="examples">Examples</string>
     <string name="hints">Hints</string>
     <string name="correct">Correct!</string>
+    <string name="wrong">Not quite.</string>
     <string name="next">Next</string>
 </resources>

@@ -4,9 +4,11 @@ package com.jlbennett.flashbotany.flash
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -25,6 +27,7 @@ class FlashFragment : Fragment() {
     private lateinit var binding: FragmentFlashBinding
     private lateinit var viewModel: FlashViewModel
     private lateinit var imageSlider: ImageSlider
+    private lateinit var currentFamilyName: String
     private var animationDuration: Int = 0
     private var familyNames = ArrayList<String>()
 
@@ -44,13 +47,22 @@ class FlashFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        binding.firstPairLayout.children.forEach { button ->
-            button.setOnClickListener { onAnswerClick() }
+        binding.firstPairLayout.children.forEach { view ->
+            val button = view as Button
+            button.setOnClickListener { onAnswerClick(button.text as String) }
         }
-        binding.secondPairLayout.children.forEach { button ->
-            button.setOnClickListener { onAnswerClick() }
+        binding.secondPairLayout.children.forEach {view ->
+            val button = view as Button
+            button.setOnClickListener { onAnswerClick(button.text as String) }
         }
+
         binding.nextButton.setOnClickListener { onNextClick() }
+
+        viewModel.currentFamily.observe(viewLifecycleOwner, Observer { family ->
+            currentFamilyName = family.name
+            val familyText = "It's ${family.name}"
+            binding.correctFamilyText.text = familyText
+        })
 
         viewModel.currentSpecies.observe(viewLifecycleOwner, Observer { species ->
             val imageList = ArrayList<SlideModel>()
@@ -58,6 +70,8 @@ class FlashFragment : Fragment() {
                 imageList.add(SlideModel(url))
             }
             imageSlider.setImageList(imageList, true)
+            binding.scientificText.text = species.scientificName
+            binding.vernacularText.text = species.vernacularName
         })
 
         viewModel.familyList.observe(viewLifecycleOwner, Observer { families ->
@@ -71,7 +85,13 @@ class FlashFragment : Fragment() {
         return binding.root
     }
 
-    private fun onAnswerClick() {
+    private fun onAnswerClick(familyName: String) {
+        Log.d("FlashFrag", "AnswerClick: $familyName vs currentFamily: $currentFamilyName")
+        if(familyName == currentFamilyName) {
+            binding.feedbackText.text = resources.getString(R.string.correct)
+        } else {
+            binding.feedbackText.text = resources.getString(R.string.wrong)
+        }
         //TODO improve animation. Maybe a horizontal swipe or smth
         crossfadeViews(R.id.feedbackLayout)
     }
