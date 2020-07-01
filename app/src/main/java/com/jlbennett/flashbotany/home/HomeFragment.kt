@@ -16,17 +16,21 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-        binding.startImage.setOnClickListener { navigateToFlashFragment() }
 
+        binding.startCard.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToFlashFragment())
+        }
+        binding.aboutCard.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToAboutFragment())
+        }
 
         return binding.root
     }
-
-    private fun navigateToFlashFragment() {
-        findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToFlashFragment())
-    }
-
 }

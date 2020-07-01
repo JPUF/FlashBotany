@@ -166,7 +166,7 @@
                     android:fontFamily="@font/custom"
                     android:text="Species Name"
                     android:textSize="18sp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="italic"
                     app:layout_constraintBottom_toTopOf="@+id/vernacularText"
                     app:layout_constraintEnd_toStartOf="@+id/nextButton"
                     app:layout_constraintHorizontal_bias="0.0"

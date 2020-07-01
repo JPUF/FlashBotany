@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">FlashBotany</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_of_the_flower_to_be_guessed">Image of the flower to be guessed.</string>
     <string name="dummy_info">Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.</string>
     <string name="examples">Examples</string>
@@ -10,4 +7,19 @@
     <string name="correct">Correct!</string>
     <string name="wrong">Not quite.</string>
     <string name="next">Next</string>
+    <string name="aboutTitle">About</string>
+    <string name="aboutText">
+        This app will help you learn how to recognise flowering plant (Angiosperm) families on sight.
+        Learning these plant families will help you identify unknown species, and give you an understanding of how the plants around you are related.\n\n
+        It\'s typically wise to focus on the flowers themselves, where there are the most commonalities within a family.\n\n
+
+        After you\'ve pressed \'START\', you will be shown images of a random flower, you can swipe for more images. It\'s your job to identify what family it belongs to.
+        The correct answer will be one of the four given plant families. After making your selection, the app will tell you if you are right or wrong, as well as the name of the flower.\n
+        If you do not know, then select \'HINTS\'. This will give you a description of the common characteristics of the same four families that you are to chose between, as well as numerous example images. \n\n
+
+        The species you\'ll see were chosen as being particularly characteristic of their wider family. When you go out spotting in the wild, bare in mind that families may appear more diverse.\n\n
+
+        All of the images are sourced from iNaturalist, where they had been marked as \'CC0 - No Rights Reserved\'. Some of the images are my own, and I\'m very grateful for all the other photographers.
+
+    </string>
 </resources>
