@@ -69,17 +69,17 @@ class FlashFragment : Fragment() {
 
         viewModel.currentSpecies.observe(viewLifecycleOwner, Observer { species ->
             val imageList = ArrayList<SlideModel>()
-            species.imageURLs.forEach { url ->
-                imageList.add(SlideModel(url))
+            species.imageURLs.forEach {path ->
+                storageRef.child(path).downloadUrl.addOnFailureListener {
+                    Log.d("FlashFrag", "On fail. ${it.localizedMessage}")
+                }.addOnSuccessListener {
+                    Log.d("FlashFrag", "On succ. ${it.toString()}")
+                    imageList.add(SlideModel(it.toString()))
+                    imageSlider.setImageList(imageList, true)
+                }
             }
 
-            val fbURL = storageRef.child("sweetpea.jpg").downloadUrl.addOnFailureListener {
-                Log.d("FlashFrag", "On fail. ${it.localizedMessage}")
-            }.addOnSuccessListener {
-                Log.d("FlashFrag", "On succ. ${it.toString()}")
-                imageList.add(SlideModel(it.toString()))
-                imageSlider.setImageList(imageList, true)
-            }
+
             binding.scientificText.text = species.scientificName
             binding.vernacularText.text = species.vernacularName
         })
