@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FlashBotany</string>
+    <string name="app_name">Flash Botany</string>
     <string name="image_of_the_flower_to_be_guessed">Image of the flower to be guessed.</string>
     <string name="dummy_info">Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.</string>
     <string name="examples">Examples</string>
@@ -20,6 +20,5 @@
         The species you\'ll see were chosen as being particularly characteristic of their wider family. When you go out spotting in the wild, bare in mind that families may appear more diverse.\n\n
 
         All of the images are sourced from iNaturalist, where they had been marked as \'CC0 - No Rights Reserved\'. Some of the images are my own, and I\'m very grateful for all the other photographers.
-
     </string>
 </resources>

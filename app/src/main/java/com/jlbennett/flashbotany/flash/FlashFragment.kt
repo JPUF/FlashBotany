@@ -17,6 +17,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentFlashBinding
 
@@ -38,6 +40,7 @@ class FlashFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_flash, container, false)
         viewModel = ViewModelProvider(this).get(FlashViewModel::class.java)
+        val storageRef = Firebase.storage.reference
         imageSlider = binding.imageSlider
 
         animationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
@@ -69,7 +72,14 @@ class FlashFragment : Fragment() {
             species.imageURLs.forEach { url ->
                 imageList.add(SlideModel(url))
             }
-            imageSlider.setImageList(imageList, true)
+
+            val fbURL = storageRef.child("sweetpea.jpg").downloadUrl.addOnFailureListener {
+                Log.d("FlashFrag", "On fail. ${it.localizedMessage}")
+            }.addOnSuccessListener {
+                Log.d("FlashFrag", "On succ. ${it.toString()}")
+                imageList.add(SlideModel(it.toString()))
+                imageSlider.setImageList(imageList, true)
+            }
             binding.scientificText.text = species.scientificName
             binding.vernacularText.text = species.vernacularName
         })

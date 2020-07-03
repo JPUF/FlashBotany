@@ -8,11 +8,11 @@ class Examples {
                 "Asteraceae",
                 "Info for asters",
                 listOf(//Example image URLs
-                    "https://static.inaturalist.org/photos/65765123/original.jpeg?1586105726",
-                    "https://static.inaturalist.org/photos/71124906/original.jpeg?1588593480",
-                    "https://static.inaturalist.org/photos/76953897/original.jpeg?1591319115",
-                    "https://static.inaturalist.org/photos/65757798/original.jpeg?1586102360",
-                    "https://static.inaturalist.org/photos/39779860/original.jpeg?1558692337"
+                    "https://static.inaturalist.org/photos/65765123/original.jpeg?1586105726",//daisy
+                    "https://static.inaturalist.org/photos/71124906/original.jpeg?1588593480",//ragwort
+                    "https://static.inaturalist.org/photos/76953897/original.jpeg?1591319115",//compass
+                    "https://static.inaturalist.org/photos/65757798/original.jpeg?1586102360",//coltsfoot
+                    "https://static.inaturalist.org/photos/39779860/original.jpeg?1558692337"//endive
                 ),
                 listOf<Species>(
                     Species(
@@ -42,10 +42,10 @@ class Examples {
                 "Boraginaceae",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Et magnis dis parturient montes nascetur ridiculus. Gravida cum sociis natoque penatibus et magnis. Tortor posuere ac ut consequat. Sagittis id consectetur purus ut faucibus. Commodo ullamcorper a lacus vestibulum sed arcu. Cum sociis natoque penatibus et magnis dis parturient montes. Lacus laoreet non curabitur gravida arcu. Nulla facilisi etiam dignissim diam quis enim lobortis. Dignissim cras tincidunt lobortis feugiat vivamus. Enim ut sem viverra aliquet. Tortor condimentum lacinia quis vel eros. Sed felis eget velit aliquet sagittis id consectetur purus.",
                 listOf(
-                    "https://static.inaturalist.org/photos/44619331/original.jpg?1562857776",
-                    "https://static.inaturalist.org/photos/79873797/original.jpg?1592677671",
-                    "https://static.inaturalist.org/photos/79588520/original.jpeg?1592538325",
-                    "https://static.inaturalist.org/photos/79782716/original.jpeg?1592643932"
+                    "https://static.inaturalist.org/photos/44619331/original.jpg?1562857776",//forget me not.
+                    "https://static.inaturalist.org/photos/79873797/original.jpg?1592677671",//indian paint
+                    "https://static.inaturalist.org/photos/79588520/original.jpeg?1592538325",//phacelia
+                    "https://static.inaturalist.org/photos/79782716/original.jpeg?1592643932"//alkanet
                 ),
                 listOf<Species>(
                     Species(
@@ -76,10 +76,10 @@ class Examples {
                 "Lamiaceae",
                 "Info on lamiaceous plants",
                 listOf(
-                    "https://img.crocdn.co.uk/images/products2/pl/10/00/00/07/pl1000000744.jpg",
-                    "https://static.inaturalist.org/photos/66819729/original.jpeg?1586795474",
-                    "https://static.inaturalist.org/photos/77236009/original.jpeg?1591462361",
-                    "https://static.inaturalist.org/photos/77860257/original.jpg?1591731111"
+                    "https://img.crocdn.co.uk/images/products2/pl/10/00/00/07/pl1000000744.jpg",//self heal
+                    "https://static.inaturalist.org/photos/66819729/original.jpeg?1586795474",//bugle
+                    "https://static.inaturalist.org/photos/77236009/original.jpeg?1591462361",//woundwort
+                    "https://static.inaturalist.org/photos/77860257/original.jpg?1591731111"//skullcap
                 ),
                 listOf<Species>(
                     Species(
@@ -102,11 +102,10 @@ class Examples {
                 "Rosaceae",
                 "Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.",
                 listOf(
-                    "https://static.inaturalist.org/photos/70328000/original.jpeg?1588245875",
-                    "https://static.inaturalist.org/photos/47763529/original.jpeg?1565472962",
-                    "https://static.inaturalist.org/photos/70818504/original.jpeg?1588465954",
-                    "https://static.inaturalist.org/photos/43664692/original.jpeg?1562026303",
-                    "https://static.inaturalist.org/photos/41131329/original.jpeg?1559812391"
+                    "https://static.inaturalist.org/photos/70328000/original.jpeg?1588245875",//Wood Avens
+                    "https://static.inaturalist.org/photos/67281942/original.jpeg?1587107754",//Hawthorn
+                    "https://static.inaturalist.org/photos/70818504/original.jpeg?1588465954",//Malus
+                    "https://static.inaturalist.org/photos/41131329/original.jpeg?1559812391"//Rugosa Rose or w.e
                 ),
                 listOf<Species>(
                     Species(
@@ -114,13 +113,6 @@ class Examples {
                         listOf(
                             "https://newfs.s3.amazonaws.com/taxon-images-1000s1000/Rosaceae/argentina-anserina-fl-ahaines-a.jpg",
                             "https://lh3.googleusercontent.com/proxy/94xUgBrE5cA5FEv7_B26WIDj3Gfp0oQNvnT7ZjP2uns5SR9CKFI9vfhXqS8-sfKzJQ8Eh1sFscaeMoIRPYsYXFcXVHKO9kyQoUfHQorXPR7ewV9m"
-                        )
-                    ),
-                    Species(
-                        "Cotoneaster horizontalis", "Cotoneaster",
-                        listOf(
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Rosaceae_-_Cotoneaster_horizontalis-002.JPG/1200px-Rosaceae_-_Cotoneaster_horizontalis-002.JPG",
-                            "https://upload.wikimedia.org/wikipedia/commons/5/5c/Cotoneaster_horizontalis_10.jpg"
                         )
                     ),
                     Species(
