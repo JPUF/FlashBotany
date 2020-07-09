@@ -75,7 +75,7 @@
                         android:layout_marginEnd="4dp"
                         android:fontFamily="@font/custom"
                         android:textAllCaps="false"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         tools:text="Family Name 1" />
 
                 <Button
@@ -85,7 +85,7 @@
                         android:layout_marginEnd="4dp"
                         android:fontFamily="@font/custom"
                         android:textAllCaps="false"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         tools:text="Family Name 2" />
             </LinearLayout>
 
@@ -103,7 +103,7 @@
                         android:layout_marginStart="4dp"
                         android:fontFamily="@font/custom"
                         android:textAllCaps="false"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         tools:text="Family Name 3" />
 
                 <Button
@@ -113,7 +113,7 @@
                         android:layout_marginStart="4dp"
                         android:fontFamily="@font/custom"
                         android:textAllCaps="false"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         tools:text="Family Name 4" />
             </LinearLayout>
 

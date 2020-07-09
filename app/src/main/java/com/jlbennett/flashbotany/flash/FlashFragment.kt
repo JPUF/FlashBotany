@@ -46,7 +46,8 @@ class FlashFragment : Fragment() {
         animationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
 
         binding.hintButton.setOnClickListener {
-            val action = FlashFragmentDirections.actionFlashFragmentToInfoFragment(familyNames.toTypedArray())
+            val action =
+                FlashFragmentDirections.actionFlashFragmentToInfoFragment(familyNames.toTypedArray())
             findNavController().navigate(action)
         }
 
@@ -54,7 +55,7 @@ class FlashFragment : Fragment() {
             val button = view as Button
             button.setOnClickListener { onAnswerClick(button.text as String) }
         }
-        binding.secondPairLayout.children.forEach {view ->
+        binding.secondPairLayout.children.forEach { view ->
             val button = view as Button
             button.setOnClickListener { onAnswerClick(button.text as String) }
         }
@@ -69,7 +70,7 @@ class FlashFragment : Fragment() {
 
         viewModel.currentSpecies.observe(viewLifecycleOwner, Observer { species ->
             val imageList = ArrayList<SlideModel>()
-            species.imageURLs.forEach {path ->
+            species.imageURLs.forEach { path ->
                 storageRef.child(path).downloadUrl.addOnFailureListener {
                     Log.d("FlashFrag", "On fail. ${it.localizedMessage}")
                 }.addOnSuccessListener {
@@ -85,7 +86,8 @@ class FlashFragment : Fragment() {
         })
 
         viewModel.familyList.observe(viewLifecycleOwner, Observer { families ->
-            familyNames = arrayListOf(families[0].name, families[1].name, families[2].name, families[3].name)
+            familyNames =
+                arrayListOf(families[0].name, families[1].name, families[2].name, families[3].name)
             binding.familyButton1.text = familyNames[0]
             binding.familyButton2.text = familyNames[1]
             binding.familyButton3.text = familyNames[2]
@@ -97,7 +99,7 @@ class FlashFragment : Fragment() {
 
     private fun onAnswerClick(familyName: String) {
         Log.d("FlashFrag", "AnswerClick: $familyName vs currentFamily: $currentFamilyName")
-        if(familyName == currentFamilyName) {
+        if (familyName == currentFamilyName) {
             binding.feedbackText.text = resources.getString(R.string.correct)
         } else {
             binding.feedbackText.text = resources.getString(R.string.wrong)
@@ -122,7 +124,10 @@ class FlashFragment : Fragment() {
             visibleView = binding.feedbackLayout
         }
 
-        targetView.apply {
+        targetView.visibility = View.VISIBLE
+        visibleView.visibility = View.INVISIBLE
+
+        /*targetView.apply {
             alpha = 0f
             visibility = View.VISIBLE
 
@@ -139,6 +144,6 @@ class FlashFragment : Fragment() {
                 override fun onAnimationEnd(animation: Animator?) {
                     visibleView.visibility = View.INVISIBLE
                 }
-            })
+            })*/
     }
 }
