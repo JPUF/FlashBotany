@@ -1,6 +1,6 @@
 package com.jlbennett.flashbotany.data
 
-import android.widget.GridLayout
+import com.jlbennett.flashbotany.R
 
 class Examples {
 
@@ -8,7 +8,7 @@ class Examples {
         val families = listOf<Family>(
             Family(
                 "Asteraceae",
-                "Info for asters",
+                R.string.asteraceae,
                 listOf(//Example image URLs
                     "daisy.jpg",//daisy
                     "ragwort.jpg",//ragwort
@@ -42,7 +42,7 @@ class Examples {
             ),
             Family(
                 "Boraginaceae",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Et magnis dis parturient montes nascetur ridiculus. Gravida cum sociis natoque penatibus et magnis. Tortor posuere ac ut consequat. Sagittis id consectetur purus ut faucibus. Commodo ullamcorper a lacus vestibulum sed arcu. Cum sociis natoque penatibus et magnis dis parturient montes. Lacus laoreet non curabitur gravida arcu. Nulla facilisi etiam dignissim diam quis enim lobortis. Dignissim cras tincidunt lobortis feugiat vivamus. Enim ut sem viverra aliquet. Tortor condimentum lacinia quis vel eros. Sed felis eget velit aliquet sagittis id consectetur purus.",
+                R.string.boraginaceae,
                 listOf(
                     "forgetmenot.jpg",//forget me not.
                     "indiantpaint.jpg",//indian paint
@@ -75,7 +75,7 @@ class Examples {
             ),
             Family(
                 "Lamiaceae",
-                "Info on lamiaceous plants",
+                R.string.lamiaceae,
                 listOf(
                     "selfheal1.jpg",//self heal
                     "bugle.jpg",//bugle
@@ -101,7 +101,7 @@ class Examples {
             ),
             Family(
                 "Rosaceae",
-                "Petals: 5\nSepals: 5\nStamens: many\nStyles: many\nInfo: sepals alternate with petals.",
+                R.string.rosaceae,
                 listOf(
                     "woodavens.jpg",//Wood Avens
                     "hawthorn.jpg",//Hawthorn
@@ -141,7 +141,7 @@ class Examples {
             ),
             Family(
                 "Brassicaceae",
-                "Brassica info",
+                R.string.brassicaceae,
                 listOf(
                     "charlock.jpg",//Jointed charlock
                     "rockcress.jpg",//Purple Rock Cress
@@ -166,7 +166,7 @@ class Examples {
             ),
             Family(
                 "Fabaceae",
-                "Legume info",
+                R.string.fabaceae,
                 listOf(
                     "sweetpea.jpg",//Broad leaved sweet pea
                     "vetch.jpg",//Bush Vetch
@@ -200,7 +200,7 @@ class Examples {
             ),
             Family(
                 "Caryophyllaceae",
-                "The Pink family.\n2 to 5 styles.\n5 OR 10 stamens.\n5 petals, the ends are often split.\n5 sepals. Superior ovary.",
+                R.string.carylophyllaceae,
                 listOf(
                     "whitecampion.jpg",
                     "firepink.jpg",
@@ -241,7 +241,7 @@ class Examples {
             ),
             Family(
                 "Ericaceae",
-                "Ericaceae info",
+                R.string.ericaceae,
                 listOf(
                     "bilberry.jpg",
                     "bearberry.jpg",
@@ -280,7 +280,7 @@ class Examples {
             ),
             Family(
                 "Polygonaceae",
-                "The Buckwheat/Knotweed family.\nPlants typically have many small flowers.\nNo petals.\n5-6 coloured sepals. 3 to 9 stamens.\n3 styles.",
+                R.string.polygonaceae,
                 listOf(
                     "redshank.jpg",
                     "curleddock.jpg",
@@ -327,7 +327,7 @@ class Examples {
             ),
             Family(
                 "Apiaceae",
-                "The Carrot/Parsley family.\nFlowers arranged in compound umbels.\n5 petals.\n5 stamens.",
+                R.string.apiaceae,
                 listOf(
                     "hedgeparsley.jpg",
                     "alexander.jpg",
@@ -375,7 +375,7 @@ class Examples {
             ),
             Family(
                 "Liliaceae",
-                "The Lily family.\n3 petals and 3 sepals, all same size and colour.\n6 stamens.\nPistil with a 3-parted stigma.\nLeaves with parallel veins.",
+                R.string.liliaceae,
                 listOf(
                     "martagon.jpg",
                     "bluebead.jpg",

@@ -1,8 +1,6 @@
 package com.jlbennett.flashbotany.flash
 
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater

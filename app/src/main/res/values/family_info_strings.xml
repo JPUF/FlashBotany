@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="asteraceae">
+        Info for asters.
+    </string>
+    <string name="boraginaceae">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Et magnis dis parturient montes nascetur ridiculus. Gravida cum sociis natoque penatibus et magnis. Tortor posuere ac ut consequat. Sagittis id consectetur purus ut faucibus. Commodo ullamcorper a lacus vestibulum sed arcu. Cum sociis natoque penatibus et magnis dis parturient montes. Lacus laoreet non curabitur gravida arcu. Nulla facilisi etiam dignissim diam quis enim lobortis. Dignissim cras tincidunt lobortis feugiat vivamus. Enim ut sem viverra aliquet. Tortor condimentum lacinia quis vel eros. Sed felis eget velit aliquet sagittis id consectetur purus.
+    </string>
+    <string name="lamiaceae">
+        Info for lamiaceous plants.
+    </string>
+    <string name="rosaceae">
+        <annotation type="Petal">Petals</annotation>: 5\nSepals: 5\nStamens: many\n<annotation type="Style">Styles</annotation>: many\nInfo: sepals alternate with petals.
+    </string>
+    <string name="brassicaceae">
+        Brassica info.
+    </string>
+    <string name="fabaceae">
+        Legume info.
+    </string>
+    <string name="carylophyllaceae">
+        The Pink family.\n2 to 5 styles.\n5 OR 10 stamens.\n5 petals, the ends are often split.\n5 sepals. Superior ovary.
+    </string>
+    <string name="ericaceae">
+        Info.
+    </string>
+
+    <string name="polygonaceae">
+        The Buckwheat/Knotweed family.\nPlants typically have many small flowers.\nNo petals.\n5-6 coloured sepals. 3 to 9 stamens.\n3 styles.
+    </string>
+    <string name="apiaceae">
+        The Carrot/Parsley family.\nFlowers arranged in compound umbels.\n5 petals.\n5 stamens.
+    </string>
+    <string name="liliaceae">
+        The Lily family.\n3 petals and 3 sepals, all same size and colour.\n6 stamens.\nPistil with a 3-parted stigma.\nLeaves with parallel veins.
+    </string>
+
+</resources>
