@@ -41,6 +41,14 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
         }
         binding.infoText.text = currentFamily.info
 
+        binding.showButton.setOnClickListener { showDictionaryDialog() }
+
         return binding.root
+    }
+
+    private fun showDictionaryDialog() {
+        val fragmentManager = childFragmentManager
+        val dictionaryDialogFragment = DictionaryDialogFragment("Title Term ye yee")
+        dictionaryDialogFragment.show(fragmentManager, "fragment_dictionary")
     }
 }
