@@ -16,6 +16,22 @@ class DictionaryDialogFragment(private val title: String) : DialogFragment() {
     ): View? {
         val binding: FragmentDictionaryBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_dictionary, container, false)
         binding.titleText.text = title
+        binding.definitionText.text = getText(termResID(title))
         return binding.root
+    }
+
+    private fun termResID(term: String) : Int {
+        return when(term) {
+            "Petal" -> R.string.petal
+            "Sepal" -> R.string.sepal
+            "Umbel" -> R.string.umbel
+            "Stigma" -> R.string.stigma
+            "Style" -> R.string.style
+            "Ovary" -> R.string.ovary
+            "Pistil" -> R.string.pistil
+            "Stamen" -> R.string.stamen
+            "Anther" -> R.string.anther
+            else -> R.string.errorDefinition
+        }
     }
 }

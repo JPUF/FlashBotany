@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="errorDefinition">Error retrieving the definition.</string>
+    <string name="petal">Definition of a petal.</string>
+    <string name="sepal">Definition of a sepal.</string>
+    <string name="umbel">Definition of an umbel.</string>
+    <string name="stigma">Definition of a stigma.</string>
+    <string name="style">Definition of a style.</string>
+    <string name="ovary">Definition of a ovary.</string>
+    <string name="pistil">Definition of a pistil.</string>
+    <string name="stamen">Definition of a stamen.</string>
+    <string name="anther">Definition of a anther.</string>
+</resources>

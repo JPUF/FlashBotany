@@ -10,7 +10,12 @@
         Info for lamiaceous plants.
     </string>
     <string name="rosaceae">
-        <annotation type="Petal">Petals</annotation>: 5\nSepals: 5\nStamens: many\n<annotation type="Style">Styles</annotation>: many\nInfo: sepals alternate with petals.
+        The Rose family.\n\n
+        <annotation type="Petal">Petals</annotation>: 5\n\n
+        <annotation type="Sepal">Sepals</annotation>: 5\n\n
+        <annotation type="Stamen">Stamens</annotation>: many\n\n
+        <annotation type="Style">Styles</annotation>: many\n\n
+        Info: sepals alternate with petals.
     </string>
     <string name="brassicaceae">
         Brassica info.
@@ -19,20 +24,36 @@
         Legume info.
     </string>
     <string name="carylophyllaceae">
-        The Pink family.\n2 to 5 styles.\n5 OR 10 stamens.\n5 petals, the ends are often split.\n5 sepals. Superior ovary.
+        The Pink family.\n\n
+        2 to 5 <annotation type="Style">styles</annotation>.\n\n
+        5 OR 10 <annotation type="Stamen">stamens</annotation>.\n\n
+        5 <annotation type="Petal">petals</annotation>, the ends are often split.\n\n
+        5 <annotation type="Sepal">sepals</annotation>.\n\n
+        <annotation type="Superior ovary">Superior ovary</annotation>.
     </string>
     <string name="ericaceae">
         Info.
     </string>
 
     <string name="polygonaceae">
-        The Buckwheat/Knotweed family.\nPlants typically have many small flowers.\nNo petals.\n5-6 coloured sepals. 3 to 9 stamens.\n3 styles.
+        The Buckwheat/Knotweed family.\nPlants typically have many small flowers.\n\n
+        No <annotation type="Petal">petals</annotation>.\n
+        5-6 coloured <annotation type="Sepal">sepals</annotation>. 3 to 9 <annotation type="Stamen">stamens</annotation>.\n
+        3 <annotation type="Style">styles</annotation>.
     </string>
+
     <string name="apiaceae">
-        The Carrot/Parsley family.\nFlowers arranged in compound umbels.\n5 petals.\n5 stamens.
+        The Carrot/Parsley family.\n\n
+        Flowers arranged in compound <annotation type="Umbel">umbels</annotation>.\n
+        5 <annotation type="Petals">petals</annotation>.\n
+        5 <annotation type="Stamen">stamens</annotation>.
     </string>
     <string name="liliaceae">
-        The Lily family.\n3 petals and 3 sepals, all same size and colour.\n6 stamens.\nPistil with a 3-parted stigma.\nLeaves with parallel veins.
+        The Lily family.\n\n
+        3 <annotation type="Petals">petals</annotation> and 3 <annotation type="Sepal">sepals</annotation>, often the same size and colour.\n
+        6 <annotation type="Stamen">stamens</annotation>.\n
+        <annotation type="Pistil">Pistil</annotation> with a 3-parted <annotation type="Stigma">stigma</annotation>.\n
+        Leaves with parallel veins.
     </string>
 
 </resources>
