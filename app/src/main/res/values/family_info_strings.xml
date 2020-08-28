@@ -15,7 +15,9 @@
         <annotation type="Sepal">Sepals</annotation>: 5\n\n
         <annotation type="Stamen">Stamens</annotation>: many\n\n
         <annotation type="Style">Styles</annotation>: many\n\n
-        Info: sepals alternate with petals.
+        Info: sepals alternate with petals. Oval shaped <annotation type="Serrated">serrated</annotation> leaves. The many stamens is particularly characteristic of this family.\n\n
+        Do not expect cultivated varieties to adhere to these patterns.\n\n
+        Could be confused with members of the Ranunculaceae (Buttercup) family, however Buttercup leaves never have <annotation type="stipule">stipules</annotation>.
     </string>
     <string name="brassicaceae">
         Brassica info.
@@ -26,20 +28,26 @@
     <string name="carylophyllaceae">
         The Pink family.\n\n
         2 to 5 <annotation type="Style">styles</annotation>.\n\n
-        5 OR 10 <annotation type="Stamen">stamens</annotation>.\n\n
+        5 OR 10 <annotation type="Stamen">stamens</annotation>, arranged in 1 or 2 <annotation type="Whorl">whorls</annotation>\n\n
         5 <annotation type="Petal">petals</annotation>, the ends are often split.\n\n
         5 <annotation type="Sepal">sepals</annotation>.\n\n
-        <annotation type="Superior ovary">Superior ovary</annotation>.
+        <annotation type="Superior ovary">Superior ovary</annotation>.\n\n
+        Info: Members usually have opposite leaves.
     </string>
     <string name="ericaceae">
-        Info.
+        The Heath/Blueberry family.\n\n
+        4 or 5 united <annotation type="Sepal">sepals</annotation>.\n\n
+        4 or 5 united <annotation type="Petal">petals</annotation>. Often urn or bell shaped.\n\n
+        Info: Leaves are usually evergreen. The urn shaped petals are a great diagnostic helper. Most members are shrubs. Thrive on poorly drained acidic soils.
     </string>
 
     <string name="polygonaceae">
         The Buckwheat/Knotweed family.\nPlants typically have many small flowers.\n\n
         No <annotation type="Petal">petals</annotation>.\n
         5-6 coloured <annotation type="Sepal">sepals</annotation>. 3 to 9 <annotation type="Stamen">stamens</annotation>.\n
-        3 <annotation type="Style">styles</annotation>.
+        3 <annotation type="Style">styles</annotation>.\n\n
+        Info: swollen joints/nodes on the stems (Polygonum means many-knees).\n\n
+        Flowers in <annotation type="Fascicle">fascicles</annotation>, which are then arranged on <annotation type="Inflorescence">inflorescences</annotation>.
     </string>
 
     <string name="apiaceae">

@@ -41,7 +41,7 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
             storageRef.child(path).downloadUrl.addOnFailureListener {
                 Log.d("InfoPage", "Failed: ${it.localizedMessage}")
             }.addOnSuccessListener {
-                Log.d("FlashFrag", "On succ. ${it.toString()}")
+                Log.d("InfoPage", "On succ. ${it.toString()}")
                 imageList.add(SlideModel(it.toString()))
                 imageSlider.setImageList(imageList, true)
             }
