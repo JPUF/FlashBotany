@@ -22,8 +22,13 @@
     <string name="brassicaceae">
         Brassica info.
     </string>
+    <!--TODO include more sample legume pics to show Banner Wings Keel. -->
     <string name="fabaceae">
-        Legume info.
+        The Pea family, the legumes.\n\n
+        5 united <annotation type="petal">petals</annotation>.\n\n
+        Usually 10 <annotation type="stamen">stamens</annotation>.\n\n
+        Ovary matures into a pea pod.\n\n
+        Legumes can be identified by the petals arranged to form the: banner, wings, and keel. The banner is a single large petal with two lobes, usually at the top. Beneath this are two smaller \'wing\' petals. The keel is made of the two smallest petals, united at the bottom.
     </string>
     <string name="carylophyllaceae">
         The Pink family.\n\n
