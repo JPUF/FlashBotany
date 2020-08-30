@@ -4,7 +4,9 @@
         Info for asters.
     </string>
     <string name="boraginaceae">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Et magnis dis parturient montes nascetur ridiculus. Gravida cum sociis natoque penatibus et magnis. Tortor posuere ac ut consequat. Sagittis id consectetur purus ut faucibus. Commodo ullamcorper a lacus vestibulum sed arcu. Cum sociis natoque penatibus et magnis dis parturient montes. Lacus laoreet non curabitur gravida arcu. Nulla facilisi etiam dignissim diam quis enim lobortis. Dignissim cras tincidunt lobortis feugiat vivamus. Enim ut sem viverra aliquet. Tortor condimentum lacinia quis vel eros. Sed felis eget velit aliquet sagittis id consectetur purus.
+        The Borage family.\n\n
+        Flower parts come in 5.\n\n
+        Most members are very hairy. Flowers sometimes uncoil from a <annotation type="cyme">cyme</annotation> like a scorpion's tail - a scorpioid cyme.
     </string>
     <string name="lamiaceae">
         Info for lamiaceous plants.
@@ -58,15 +60,16 @@
     <string name="apiaceae">
         The Carrot/Parsley family.\n\n
         Flowers arranged in compound <annotation type="Umbel">umbels</annotation>.\n
-        5 <annotation type="Petals">petals</annotation>.\n
-        5 <annotation type="Stamen">stamens</annotation>.
+        The small individual flowers have 5 <annotation type="Petal">petals</annotation>.\n
+        5 <annotation type="Stamen">stamens</annotation>.\n\n
+        Seeds mature as a two chambered <annotation type="Ovary">ovary</annotation>. Plants typically grow with hollow stems.
     </string>
     <string name="liliaceae">
         The Lily family.\n\n
-        3 <annotation type="Petals">petals</annotation> and 3 <annotation type="Sepal">sepals</annotation>, often the same size and colour.\n
-        6 <annotation type="Stamen">stamens</annotation>.\n
-        <annotation type="Pistil">Pistil</annotation> with a 3-parted <annotation type="Stigma">stigma</annotation>.\n
-        Leaves with parallel veins.
+        3 <annotation type="Petals">petals</annotation> and 3 <annotation type="Sepal">sepals</annotation>, often the same size and colour.\n\n
+        6 <annotation type="Stamen">stamens</annotation>.\n\n
+        <annotation type="Pistil">Pistil</annotation> with a 3-parted <annotation type="Stigma">stigma</annotation>.\n\n
+        These flowers are <annotation type="Monocot">monocots</annotation>>, as shown by their leaves with parallel veins.
     </string>
 
 </resources>
