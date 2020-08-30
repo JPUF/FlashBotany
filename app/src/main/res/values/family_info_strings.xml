@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="asteraceae">
-        Info for asters.
+        The Sunflower/Daisy family.\n\n
+        What appears as one flower is actually a composite of many individual <annotation type="Floret">florets</annotation>, growing on a disk.\n\n
+        The disk of florets is typically surrounded by one or many series/layers of <annotation type="Bract">bracts</annotation>.
+
     </string>
     <string name="boraginaceae">
         The Borage family.\n\n
         Flower parts come in 5.\n\n
-        Most members are very hairy. Flowers sometimes uncoil from a <annotation type="cyme">cyme</annotation> like a scorpion's tail - a scorpioid cyme.
+        Most members are very hairy. Flowers sometimes uncoil from a <annotation type="Cyme">cyme</annotation> like a scorpion\'s tail - a scorpioid cyme.
     </string>
     <string name="lamiaceae">
-        Info for lamiaceous plants.
+        The Mint family.\n\n
+        5 fused <annotation type="Petal">petals</annotation>, arranged asymmetrically, usually 2 lobes up and 3 down. \n\n
+        5 fused <annotation type="Sepal">sepals</annotation>, only the tips are separate.\n\n
+        4 <annotation type="Stamen">stamen</annotation>, one pair shorter than the other.\n\n
+        Info: Usually has a square stalk. Simple and opposite leaves. Often quite aromatic too.\n
+        Flowers often arranged in a <annotation type="Verticillaster">verticillaster</annotation>.
     </string>
     <string name="rosaceae">
         The Rose family.\n\n
@@ -22,13 +30,16 @@
         Could be confused with members of the Ranunculaceae (Buttercup) family, however Buttercup leaves never have <annotation type="stipule">stipules</annotation>.
     </string>
     <string name="brassicaceae">
-        Brassica info.
+        The Mustard family.\n\n
+        4 <annotation type="Petal">petals</annotation>, and 4 <annotation type="Sepal">sepals</annotation>.\n\n
+        6 <annotation type="Stamen">stamens</annotation>, 2 of which short.\n\n
+        1 <annotation type="Pistil">pistil</annotation>.\n\n
+        Info: Often found on exposed and disturbed land.
     </string>
-    <!--TODO include more sample legume pics to show Banner Wings Keel. -->
     <string name="fabaceae">
         The Pea family, the legumes.\n\n
-        5 united <annotation type="petal">petals</annotation>.\n\n
-        Usually 10 <annotation type="stamen">stamens</annotation>.\n\n
+        5 united <annotation type="Petal">petals</annotation>.\n\n
+        Usually 10 <annotation type="Stamen">stamens</annotation>.\n\n
         Ovary matures into a pea pod.\n\n
         Legumes can be identified by the petals arranged to form the: banner, wings, and keel. The banner is a single large petal with two lobes, usually at the top. Beneath this are two smaller \'wing\' petals. The keel is made of the two smallest petals, united at the bottom.
     </string>

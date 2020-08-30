@@ -170,7 +170,9 @@ class Examples {
                 listOf(
                     "sweetpea.jpg",//Broad leaved sweet pea
                     "vetch.jpg",//Bush Vetch
-                    "blackmedick.jpg" //Black medick
+                    "blackmedick.jpg", //Black medick
+                    "capegorse.jpg", //Goldensceptre capegorse
+                    "gorsebitterpea.jpg" //Gorse Bitter-Pea
                 ),
                 listOf<Species>(
                     Species(
@@ -270,7 +272,7 @@ class Examples {
                         )
                     ),
                     Species(
-                        "Kalmia microphylla" ,"Western Bog Laurel",
+                        "Kalmia microphylla", "Western Bog Laurel",
                         listOf(
                             "boglaurel1.jpg",
                             "boglaurel2.jpg"
@@ -296,14 +298,14 @@ class Examples {
                         )
                     ),
                     Species(
-                       "Persicaria amphibia", "Amphibious Bistort",
+                        "Persicaria amphibia", "Amphibious Bistort",
                         listOf(
                             "amphibiousbistort1.jpg",
                             "amphibiousbistort2.jpg",
                             "amphibiousbistort3.jpg"
                         )
-                    ),Species(
-                       "Bistorta officinalis", "Common Bistort",
+                    ), Species(
+                        "Bistorta officinalis", "Common Bistort",
                         listOf(
                             "commonbistort1.jpg",
                             "commonbistort2.jpg"

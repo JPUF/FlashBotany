@@ -31,6 +31,15 @@ class DictionaryDialogFragment(private val title: String) : DialogFragment() {
             "Pistil" -> R.string.pistil
             "Stamen" -> R.string.stamen
             "Anther" -> R.string.anther
+            "Whorl" -> R.string.whorl
+            "Inflorescence" -> R.string.inflorescence
+            "Serrated" -> R.string.serrated
+            "Stipule" -> R.string.stipule
+            "Monocot" -> R.string.monocot
+            "Cyme" -> R.string.cyme
+            "Floret" -> R.string.floret
+            "Bract" -> R.string.bract
+            "Verticillaster" -> R.string.verticillaster
             else -> R.string.errorDefinition
         }
     }
