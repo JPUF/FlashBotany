@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="errorDefinition">Error retrieving the definition.</string>
-    <string name="petal">Definition of a petal.</string>
-    <string name="sepal">Definition of a sepal.</string>
-    <string name="umbel">Definition of an umbel.</string>
-    <string name="stigma">Definition of a stigma.</string>
-    <string name="style">Definition of a style.</string>
-    <string name="ovary">Definition of a ovary.</string>
+    <string name="petal">Modified leaves that are usually conspicuously coloured. Collectively, the petals of a flower are known as the corolla.</string>
+    <string name="sepal">Typically green or inconspicuous found on the outermost part of the flower. They provide protection for the flower. The flower buds seen before bloom are made of sepals. Collectively, the sepals of a flower are known as the calyx.</string>
+    <string name="umbel">A type of inflorescence where a number of short stalks (pedicels) emerge from one point, like the spokes of an umbrella. A compound umbel is where there\'s an umbel at the end of each stalk</string>
+    <string name="stigma">The top-most part of the female reproductive organ of a flower. The stigma receives pollen. The stigma is on top of the style, which is above the ovary. Collectively, these female parts form the pistil. </string>
+    <string name="style">As part of the female reproductive organ of a flower, the style is a narrow tube-like extension connecting the ovary to the stigma.</string>
+    <string name="ovary">Part of the female reproductive organ. The ovary holds ovules, and is where pollen grains fertilise ovules. An ovary is superior if it\'s situated above other flower parts (namely the petals/sepals/male parts). If it's beneath, then it's inferior.</string>
     <string name="pistil">Definition of a pistil.</string>
     <string name="stamen">Definition of a stamen.</string>
     <string name="anther">Definition of a anther.</string>

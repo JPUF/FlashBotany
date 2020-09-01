@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/linear"
+            android:id="@+id/constraint"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".flash.FlashFragment">
@@ -16,7 +16,7 @@
                 android:layout_height="0dp"
                 android:layout_margin="16dp"
                 app:cardCornerRadius="6dp"
-                app:layout_constraintBottom_toTopOf="@+id/hintButton"
+                app:layout_constraintBottom_toTopOf="@+id/answerLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -29,22 +29,6 @@
                     app:error_image="@color/colorPrimaryDark"
                     app:placeholder="@color/colorPrimaryDark" />
         </androidx.cardview.widget.CardView>
-
-        <Button
-                android:id="@+id/hintButton"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/custom"
-                android:text="@string/hints"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/answerLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageCard" />
 
         <LinearLayout
                 android:id="@+id/answerLayout"
@@ -59,21 +43,27 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageCard"
                 tools:visibility="invisible">
 
             <LinearLayout
                     android:id="@+id/firstPairLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-
+                <!--TODO convert to appcompat android.support.v7.widget.AppCompatButton-->
                 <Button
                         android:id="@+id/familyButton1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/custom"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMaxTextSize="16sp"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         tools:text="Family Name 1" />
@@ -83,16 +73,39 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/custom"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMaxTextSize="16sp"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         tools:text="Family Name 2" />
             </LinearLayout>
 
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/hintButton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/custom"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/question"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.FlashBotany.Button.Circle" />
+
             <LinearLayout
                     android:id="@+id/secondPairLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -101,7 +114,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/custom"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMaxTextSize="16sp"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         tools:text="Family Name 3" />
@@ -111,7 +129,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/custom"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMaxTextSize="16sp"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         tools:text="Family Name 4" />
@@ -127,7 +150,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hintButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageCard"
                 tools:visibility="visible">
 
             <TextView
