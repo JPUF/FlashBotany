@@ -80,7 +80,7 @@
         3 <annotation type="Petal">petals</annotation> and 3 <annotation type="Sepal">sepals</annotation>, often the same size and colour.\n\n
         6 <annotation type="Stamen">stamens</annotation>.\n\n
         <annotation type="Pistil">Pistil</annotation> with a 3-parted <annotation type="Stigma">stigma</annotation>.\n\n
-        These flowers are <annotation type="Monocot">monocots</annotation>>, as shown by their leaves with parallel veins.
+        These flowers are <annotation type="Monocot">monocots</annotation>, as shown by their leaves with parallel veins.
     </string>
 
 </resources>
