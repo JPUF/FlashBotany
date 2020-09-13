@@ -37,9 +37,6 @@ class InfoFragment : Fragment() {
 
     private inner class InfoPageAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
         override fun getCount(): Int = 4
-
-        //TODO read these from the SafeArgs
-        //val names = listOf<String>("Rosaceae", "Asteraceae", "Boraginaceae", "Lamiaceae")
         val names: Array<String> = args.familyNames
         override fun getItem(position: Int): Fragment = InfoPageFragment(names[position])
 

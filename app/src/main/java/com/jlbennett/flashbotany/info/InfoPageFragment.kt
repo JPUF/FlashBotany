@@ -52,8 +52,6 @@ class InfoPageFragment(private val familyName: String) : Fragment() {
         return binding.root
     }
 
-    //TODO improve scaling on other resolutions.
-
     private fun setInfoText(infoResID: Int) {
         val rawText = getText(infoResID)
         val infoText = SpannedString(rawText)

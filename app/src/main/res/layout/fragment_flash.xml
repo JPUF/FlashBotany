@@ -53,34 +53,38 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
                 <!--TODO convert to appcompat android.support.v7.widget.AppCompatButton-->
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/familyButton1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="#FFFFFF"
                         android:ellipsize="end"
                         android:fontFamily="@font/custom"
                         android:inputType="none"
                         android:maxLines="1"
-                        android:autoSizeTextType="uniform"
-                        android:autoSizeMaxTextSize="16sp"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="18sp"
                         android:textAllCaps="false"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         tools:text="Family Name 1" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/familyButton2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="#FFFFFF"
                         android:ellipsize="end"
                         android:fontFamily="@font/custom"
                         android:inputType="none"
                         android:maxLines="1"
-                        android:autoSizeTextType="uniform"
-                        android:autoSizeMaxTextSize="16sp"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="18sp"
                         android:textAllCaps="false"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         tools:text="Family Name 2" />
             </LinearLayout>
 
@@ -109,34 +113,38 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/familyButton3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="#FFFFFF"
                         android:ellipsize="end"
                         android:fontFamily="@font/custom"
                         android:inputType="none"
                         android:maxLines="1"
-                        android:autoSizeTextType="uniform"
-                        android:autoSizeMaxTextSize="16sp"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="18sp"
                         android:textAllCaps="false"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         tools:text="Family Name 3" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/familyButton4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="#FFFFFF"
                         android:ellipsize="end"
                         android:fontFamily="@font/custom"
                         android:inputType="none"
                         android:maxLines="1"
-                        android:autoSizeTextType="uniform"
-                        android:autoSizeMaxTextSize="16sp"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="18sp"
                         android:textAllCaps="false"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         tools:text="Family Name 4" />
             </LinearLayout>
 

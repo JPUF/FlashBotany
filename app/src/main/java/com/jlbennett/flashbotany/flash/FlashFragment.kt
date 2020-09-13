@@ -20,8 +20,7 @@ import com.google.firebase.storage.ktx.storage
 import com.jlbennett.flashbotany.R
 import com.jlbennett.flashbotany.databinding.FragmentFlashBinding
 
-//TODO source copyright free images... iNat noCopy.
-//TODO fix the name selection issue.. (all four families are the same)
+
 class FlashFragment : Fragment() {
 
     private lateinit var binding: FragmentFlashBinding
@@ -102,7 +101,6 @@ class FlashFragment : Fragment() {
         } else {
             binding.feedbackText.text = resources.getString(R.string.wrong)
         }
-        //TODO improve animation. Maybe a horizontal swipe or smth
         crossfadeViews(R.id.feedbackLayout)
     }
 
