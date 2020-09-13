@@ -40,6 +40,7 @@ class DictionaryDialogFragment(private val title: String) : DialogFragment() {
             "Floret" -> R.string.floret
             "Bract" -> R.string.bract
             "Verticillaster" -> R.string.verticillaster
+            "Fascicle" -> R.string.fascicle
             else -> R.string.errorDefinition
         }
     }
